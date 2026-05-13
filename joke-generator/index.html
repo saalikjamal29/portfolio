@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator | Laugh Out Loud</title>
+    <link rel="stylesheet" href="joke-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">😂</span>
+                <span class="logo-text">JOKE HUB</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#generator" class="nav-link">Generator</a></li>
+                <li><a href="#favorites" class="nav-link">Favorites</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">Laugh Out Loud</span>
+            </h1>
+            <h2 class="hero-subtitle">Random Joke Generator</h2>
+            <p class="hero-description">
+                Generate unlimited laughs with our AI-powered joke generator. 
+                Get random jokes instantly and share the fun with friends!
+            </p>
+            <div class="cta-buttons">
+                <a href="#generator" class="btn btn-primary">
+                    <span>Start Laughing</span>
+                    <i class="fas fa-laugh"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-emoji">😂</div>
+            <div class="floating-emoji" style="animation-delay: 0.5s;">😆</div>
+            <div class="floating-emoji" style="animation-delay: 1s;">🤣</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About This App</h2>
+            <div class="about-grid">
+                <div class="glass-card about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>External API</h3>
+                    <p>Powered by Official Joke API - fetching thousands of jokes from a reliable source.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Get instant jokes with zero loading delays. Real-time joke generation at your fingertips.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Save Favorites</h3>
+                    <p>Like jokes? Save them to your favorites list and revisit your best laughs anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Generator Section -->
+    <section id="generator" class="generator">
+        <div class="container">
+            <h2 class="section-title">Joke Generator</h2>
+            
+            <div class="generator-wrapper">
+                <!-- Joke Display Card -->
+                <div class="joke-card glass-card">
+                    <div class="joke-header">
+                        <span class="joke-label">Random Joke</span>
+                        <span class="joke-number" id="jokeNumber">1</span>
+                    </div>
+                    
+                    <div class="joke-content" id="jokeContent">
+                        <p class="loading">
+                            <i class="fas fa-spinner fa-spin"></i> Click "Get Joke" to start laughing!
+                        </p>
+                    </div>
+
+                    <div class="joke-actions">
+                        <button class="btn btn-primary" id="getJokeBtn" onclick="generateJoke()">
+                            <span>Get Joke</span>
+                            <i class="fas fa-dice"></i>
+                        </button>
+                        <button class="btn btn-secondary" id="copyBtn" onclick="copyJoke()" title="Copy to clipboard">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <button class="btn btn-secondary" id="shareBtn" onclick="shareJoke()" title="Share joke">
+                            <i class="fas fa-share"></i>
+                        </button>
+                        <button class="btn btn-secondary" id="favoriteBtn" onclick="toggleFavorite()" title="Add to favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Type Filter -->
+                <div class="filter-section glass-card">
+                    <h3>Joke Type</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" onclick="setJokeType('general')" data-type="general">
+                            <i class="fas fa-smile"></i> General
+                        </button>
+                        <button class="filter-btn" onclick="setJokeType('programming')" data-type="programming">
+                            <i class="fas fa-code"></i> Programming
+                        </button>
+                        <button class="filter-btn" onclick="setJokeType('knock-knock')" data-type="knock-knock">
+                            <i class="fas fa-door-open"></i> Knock-Knock
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-section">
+                <div class="glass-card stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-laugh"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Jokes Loaded</p>
+                        <p class="stat-value" id="jokesLoaded">0</p>
+                    </div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Favorites Saved</p>
+                        <p class="stat-value" id="favoriteCount">0</p>
+                    </div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Times Shared</p>
+                        <p class="stat-value" id="shareCount">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section id="favorites" class="favorites">
+        <div class="container">
+            <h2 class="section-title">Your Favorites</h2>
+            
+            <div class="favorites-container">
+                <div id="favoritesList" class="favorites-grid">
+                    <div class="empty-state glass-card">
+                        <i class="fas fa-heart-broken"></i>
+                        <p>No favorite jokes yet. Start by liking some jokes!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="favorite-actions">
+                <button class="btn btn-secondary" id="clearFavoritesBtn" onclick="clearFavorites()" style="display: none;">
+                    <span>Clear All Favorites</span>
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Joke Hub. Powered by <a href="https://official-joke-api.appspot.com" target="_blank">Official Joke API</a></p>
+            <div class="footer-links">
+                <a href="#home">Back to Top</a>
+                <a href="https://github.com/saalikjamal29" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="joke-script.js"></script>
+</body>
+</html>
