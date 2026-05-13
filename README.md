@@ -158,7 +158,7 @@ I'm always open to:
 
 📧 **Email:** saalikjamal29@gmail.com  
 📱 **Phone:** +91- 6289949995 
-🔗 **LinkedIn:** [Saalik Jamal]([www.linkedin.com/in/saalik-jamal-ba2309345](https://www.linkedin.com/in/saalik-jamal-ba2309345/?skipRedirect=true))  
+🔗 **LinkedIn:** [Saalik Jamal](https://www.linkedin.com/in/saalik-jamal-ba2309345/?skipRedirect=true)  
 💻 **GitHub:** [@saalikjamal29](https://github.com/saalikjamal29)  
 
 ---
