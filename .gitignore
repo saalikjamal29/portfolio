@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+PIPFILE.lock
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Data files
+*.csv
+*.xlsx
+*.json
+*.pkl
+*.h5
+*.pickle
+
+# Models & Weights
+*.model
+*.pth
+*.pt
+*.pkl
+*.h5
+*.weights
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Virtual environments
+env/
+venv/
+ENV/
+
+# IDE specific files
+.vscode/settings.json
+.idea/
+.project
+.pydevproject
+.settings/
+
+# Dependencies
+node_modules/
+
+# Cache
+.cache/
+.pytest_cache/
