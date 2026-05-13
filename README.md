@@ -9,7 +9,7 @@
 🚀 Seeking **Internship Opportunities** in AI/ML
 
 [![GitHub](https://img.shields.io/badge/GitHub-saalikjamal29-black?style=flat-square&logo=github)](https://github.com/saalikjamal29)
-[![Email](https://img.shields.io/badge/Email-Contact%20Me-red?style=flat-square&logo=gmail)](mailto:your-email@example.com)
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-red?style=flat-square&logo=gmail)](mailto:saalikjamal29@gmail.com)
 
 </div>
 
