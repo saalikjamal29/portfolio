@@ -156,9 +156,9 @@ I'm always open to:
 
 **Feel free to reach out:**
 
-📧 **Email:** your-email@example.com  
-📱 **Phone:** +91-XXXXXXXXXX  
-🔗 **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)  
+📧 **Email:** saalikjamal29@gmail.com  
+📱 **Phone:** +91- 6289949995 
+🔗 **LinkedIn:** [Saalik Jamal](www.linkedin.com/in/saalik-jamal-ba2309345)  
 💻 **GitHub:** [@saalikjamal29](https://github.com/saalikjamal29)  
 
 ---
